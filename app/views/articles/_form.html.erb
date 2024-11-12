@@ -1,0 +1,15 @@
+<%= form_with model: @article, local: true do |f| %>
+  <div class="mb-3">
+    <%= f.label :title, class: "form-label" %>
+    <%= f.text_field :title, class: "form-control", id: "exampleInputTitle" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :content, class: "form-label" %>
+    <%= f.text_area :content, class: "form-control", id: "exampleInputContent" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>

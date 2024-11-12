@@ -1,0 +1,16 @@
+<%= render "navbar" %>
+<div class="container">
+  <div class="col-sm-8 offset-sm-2">
+      <h1><%= @article.title %>
+      <%= link_to edit_article_path do %>
+      <i class="fa-solid fa-pen-to-square"></i>
+      <% end %>
+      <%= link_to article_path(@article), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+      <i class="fa-solid fa-trash"></i>
+      <% end %>
+      </h1>
+      <p><%= @article.content %></p>
+  </ul>
+  <%= link_to "All articles", all_articles_path, class: "btn btn-primary text-white" %>
+  </div>
+</div>
